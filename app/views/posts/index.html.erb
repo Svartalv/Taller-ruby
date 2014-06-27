@@ -1,46 +1,72 @@
 <div class="container">
-	<h1> El blog del Medievo  <small> Últimos posts</small></h1>
+	<h1> Mi super Blog!  <small> Últimos posts</small></h1>
 	<hr />
-	<!DOCTYPE html>
+    
+    
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
     
 </head>
 <body>
 
 <ul class="example-orbit" data-orbit> 
+     
+    <div class="flex-video widescreen vimeo"> <iframe src="http://player.vimeo.com/video/75803869" width="20" height="auto" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
 
-    <div class="flex-video widescreen vimeo"> <iframe src="http://player.vimeo.com/video/75803869" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+    
     </div>
-    <li> 
-        <img src="http://38.media.tumblr.com/82526590d126295e50802d44033d0a24/tumblr_n54kzvxcjD1rqxd5ko1_1280.jpg" alt="slide 1" /> 
-        <div class="orbit-caption"> 
-        
-        Hunt of the Unicorn - 'Ormesby Psalter', England ca. 1300.
-            </div> 
-    </li>
+    
         <li class="active"> 
-        <img src="http://38.media.tumblr.com/408caded6b887e3e1bf03ae4839966a6/tumblr_mjx8nlKp6V1rqxd5ko1_1280.jpg" />
+        <img src="http://31.media.tumblr.com/f2bd5df1232713467c053bd3e45c634b/tumblr_n4ai6lK3Tr1rqxd5ko1_1280.jpg" />
         <div class="orbit-caption"> 
-        Biblia Porta, France 13th century. 
+        Easter Bunny - 'Sforza Hours', Milan 1490
     </div> 
     </li> 
-    <li>
-        <img src="http://38.media.tumblr.com/72254efb65923806196eaef072832ea7/tumblr_n7c4tv6kD31rqxd5ko1_1280.jpg" /> 
+
+
+    <li class="active"> 
+        <img src="http://37.media.tumblr.com/402eaa529e1ba04a43d5be50c1214f05/tumblr_mt9vwktEq81rqxd5ko1_1280.jpg" />
         <div class="orbit-caption"> 
-        Lion Knight and Monkey Squire -'London Rothschild Hours', Netherlands ca. 1500. 
-        </div> 
+       Watership DownLuttrell Psalter, England ca. 1325-1340. British Library, Add 42130, fol. 176v
     </li> 
+
+
+    <li class="active"> 
+        <img src="http://38.media.tumblr.com/27e69274bb090b7c2a244911251d349f/tumblr_msrmkukUod1rqxd5ko1_1280.jpg"> 
+        <div class="orbit-caption"> 
+       Alexander the Great vs. bats and rats- Le Livre et le vraye hystoire du bon roy Alixandre, France 1420.
+    </li> 
+
+    <li class="active"> 
+        <img src="http://37.media.tumblr.com/ecb32977cbeb524d1e4505394b326b60/tumblr_mtbvcfVOXZ1rqxd5ko1_1280.jpg" />
+        <div class="orbit-caption"> 
+       Hounds - De Natura animalium, Cambrai ca. 1270.
+    </li> 
+
+    <li class="active"> 
+        <img src="http://37.media.tumblr.com/c1d28d768ff430af3733f80cfaec90b4/tumblr_mfwzphfqWi1rqxd5ko1_1280.jpg" />
+        <div class="orbit-caption"> 
+       Roman d’Alexandre, Tournai, 1338-1344.
+    </li> 
+
+    <li class="active"> 
+        <img src="http://38.media.tumblr.com/tumblr_m7pwz8jhnX1rqxd5ko1_1280.png" />
+        <div class="orbit-caption"> 
+       Roman d’Alexandre, Tournai, 1338-1344.
+    </li> 
+    
     
 </ul>
 
 </body>
+
 </html>
 
 
-	<% @posts.each do |post| %>
+    <% @posts.each do |post| %>
 
 		<div class="row">
 			<h3><%= post.title %></h3>
@@ -51,11 +77,8 @@
                 <li><a <%= link_to 'Show ', post_path(post), class: "button small" %>
                 </a></li>
     		
-
-            
               <li><a <%= link_to 'Destroy', post, method: :delete,class:"button small" %> </a></li>
 
-            
             </ul>
 
 		<hr/>
