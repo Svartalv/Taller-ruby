@@ -13,7 +13,7 @@
 <ul class="example-orbit" data-orbit> 
     <li> 
         <img src="http://38.media.tumblr.com/82526590d126295e50802d44033d0a24/tumblr_n54kzvxcjD1rqxd5ko1_1280.jpg" alt="slide 1" /> 
-        <div class="orbit-caption-height:small"> 
+        <div class="orbit-caption"> 
         Caption One. 
             </div> 
     </li>
@@ -36,15 +36,29 @@
 
 
 	<% @posts.each do |post| %>
+
 		<div class="row">
 			<h3><%= post.title %></h3>
 			<p><%= post.text %></p>
-			<%= link_to 'Show ', post_path(post), class: "button small" %>
-		</div>
+
+            <ul class="button-group">
+    			
+                <li><a <%= link_to 'Show ', post_path(post), class: "button small" %>
+                </a></li>
+    		
+
+            
+              <li><a <%= link_to 'Destroy', post, method: :delete,class:"button small" %> </a></li>
+
+            
+            </ul>
+
 		<hr/>
 	<% end %>
+
 </div>
 
 <div class="row">
 	<%= link_to 'Nuevo Post', new_post_path, class: "button large-12 columns expand" %>
 </div>
+
