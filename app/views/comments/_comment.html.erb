@@ -1,0 +1,25 @@
+<% unless comment.commenter.blank? %>
+
+<p>
+
+	<strong>Commenter:</strong>
+
+	<%= comment.commenter %>
+
+</p>
+
+<p>
+
+<strong>Comment:</strong>
+
+<%= comment.body %>
+
+</p>
+
+<p>
+
+<%= link_to 'Borrar Comentario', [comment.post, comment], :confirm => '¿Estás seguro?',
+     :method => :delete %>
+</p>
+
+<%end%>
